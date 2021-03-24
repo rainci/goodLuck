@@ -16,15 +16,12 @@ app.set('view engine', 'jade')
 //express static path
 app.use(express.static(path.join(__dirname, 'public')))
 
-// app.use(require('./routes'))
+app.use(require('./routes'))
 
-app.get('/', (req, res) => {
-  res.send('rainci, Hello World!')
-})
 
 const server = app.listen(8888, () => {
   const { host, port } = server.address();
-  console.log('Example app listening at http://%s:%s', host, port);
+  console.log(`Example app listening at http://localhost:${port}`);
 })
 
 // 官方案例
@@ -39,6 +36,7 @@ const server = app.listen(8888, () => {
 // app.listen(port, () => {
 //   console.log(`Example app listening at http://localhost:${port}`)
 // })
+
 module.exports = app;
 
 
