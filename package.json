@@ -1,0 +1,30 @@
+{
+  "name": "goodluck",
+  "version": "0.0.1",
+  "description": "a good luck page, about node and redis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rainci/goodLuck.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "redis"
+  ],
+  "author": "rainci",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rainci/goodLuck/issues"
+  },
+  "homepage": "https://github.com/rainci/goodLuck#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "jade": "^1.11.0",
+    "path": "^0.12.7"
+  }
+}

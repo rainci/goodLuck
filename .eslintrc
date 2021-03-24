@@ -1,0 +1,57 @@
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
+  "parser": "babel-eslint",
+  "plugins": ["prettier", "i18n", "react-hooks"],
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "globals": {
+    "browserHistory": true,
+    "React": true,
+    "ReactDOM": true,
+    "_": true,
+    "IcoPath": true,
+    "NS_APPLICATION": true,
+    "NS_CONFIG_CENTER": true,
+    "NS_LOAD_BALANCERS": true,
+    "NS_MICRO_SERVICES": true,
+    "NS_JOB": true,
+    "i18n": true,
+    "apolloClient": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "public_v2/src/js"]
+      }
+    },
+    "import/core-modules": ["redux-form", "react", "react-router", "i18n"]
+  },
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    // "i18n/no-chinese-character": 1,
+    "react/prop-types": "warn",
+    "prettier/prettier": "error",
+    "no-useless-escape": "off",
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "react-router",
+            "importNames": ["browserHistory"],
+            "message": "don't import browserHistory from react-router, pls use it directly"
+          }
+        ]
+      }
+    ]
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  }
+}
