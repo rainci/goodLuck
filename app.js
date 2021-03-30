@@ -8,10 +8,11 @@ app.use((req, res, next) => {
   if(auth){
     res.locals.auth = auth;
   }
+  console.info('auth:',res.locals.auth)
   next();
 })
 
-app.set('views', path.join(__dirname, 'pages'))
+app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'jade')
 //express static path
 app.use(express.static(path.join(__dirname, 'public')))
